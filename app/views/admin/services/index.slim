@@ -1,0 +1,24 @@
+legend
+  | Список услуг
+  a.btn href = new_admin_service_path style = 'float: right;'  Добавить услугу
+
+
+table.table
+  thead
+    tr
+      th
+        | Название услуги
+      th
+        | Категория
+      th
+        | Действия
+  tbody
+    - @services.each do |service|
+      tr
+        td
+          = service.name
+        td
+          = service.category.name if service.category_id?
+        td
+          = link_to 'Редактировать', edit_admin_service_path(service)
+          = link_to 'Удалить', admin_service_path(service), method: :destroy, confirm: 'Вы точно хотите удалить услугу?'

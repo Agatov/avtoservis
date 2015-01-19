@@ -1,0 +1,5 @@
+legend Изменить категорию
+
+.row
+  .col-md-6
+    = render partial: "admin/categories/form", locals: {category: @category, url: admin_category_path(@category)}

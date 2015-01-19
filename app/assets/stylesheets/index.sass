@@ -1,0 +1,184 @@
+@font-face
+  font-family: 'HelveticaNeue-Light'
+  src: url('HelveticaNeueCyr-Light.otf') format("opentype")
+  font-weight: normal
+  font-style: normal
+
+@font-face
+  font-family: 'HelveticaNeue-Regular'
+  src: url('HelveticaNeueCyr-Roman.otf') format("opentype")
+  font-weight: normal
+  font-style: normal
+
+@font-face
+  font-family: 'HelveticaNeue-Thin'
+  src: url('HelveticaNeueCyr-Thin.otf') format("opentype")
+  font-weight: normal
+  font-style: normal
+
+@font-face
+  font-family: 'HelveticaNeue-UltraLight'
+  src: url('HelveticaNeueCyr-UltraLight.otf') format("opentype")
+  font-weight: normal
+  font-style: normal
+
+body
+  padding: 0px
+  margin: 0px
+  font-family: 'Arial', sans-serif
+  min-width: 1150px
+  color: #4A4A4A
+
+.wrapper
+  width: 940px
+  margin: 0px auto
+
+.clearfix
+  &:after
+    clear: both
+    content: "."
+    display: block
+    height: 0
+    clear: both
+    visibility: hidden
+
+.relative
+  position: relative
+
+.inheritance-height
+  height: 100%
+
+.topbar
+  height: 150px
+  line-height: 150px
+
+  .logo
+    float: left
+    font-size: 36px
+    font-family: 'HelveticaNeue-Regular'
+    color: #2D2D2D
+
+    img
+      width: 382px
+      height: 100px
+
+
+
+  .phone
+    float: right
+    font-size: 36px
+    font-family: 'HelveticaNeue-Light'
+    color: #2D2D2D
+
+
+
+.navbar
+  width: 100%
+  height: 80px
+  background: #242430
+  .nav
+    height: 80px
+    line-height: 80px
+
+    li
+      display: block
+      float: left
+      border-right: 1px solid #494954
+      padding: 0px 35px
+      height: 80px
+
+      &:hover
+        background: #303040
+
+      &:nth-child(4n)
+        border-right: none
+
+
+      a
+        font-size: 19px
+        color: #fff
+        font-family: 'HelveticaNeue-Light'
+        text-decoration: none
+
+        &.active
+          text-decoration: none
+
+
+.breadcrumbs
+  width: 100%
+  height: 50px
+  line-height: 50px
+  margin-top: 20px
+  font-family: 'HelveticaNeue-Light'
+  font-size: 14px
+  color: #AAB2AA
+
+  a
+    font-family: 'HelveticaNeue-Light'
+    font-size: 14px
+    color: #AAB2AA
+    text-decoration: underline
+
+
+.title
+  width: 100%
+  height: 50px
+  line-height: 50px
+  margin-top: 50px
+
+  font-size: 36px
+  font-family: 'HelveticaNeue-Light'
+  color: #2D2D2D
+
+
+.subtitle
+  width: 100%
+  height: 32px
+  line-height: 32px
+  margin-top: 50px
+
+  font-size: 24px
+  font-family: 'HelveticaNeue-Regular'
+  color: #2D2D2D
+
+.main-page
+  margin-top: 30px
+  .content
+    float: left
+    width: 540px
+
+  .news-block
+    float: right
+    width: 300px
+
+    .articles-column
+      .article
+        margin-bottom: 30px
+
+        img
+          float: left
+          width: 80px
+          height: 60px
+          margin-right: 15px
+          background: #ccc
+
+        .date
+          font-size: 14px
+          color: #4A4A4A
+          padding-right: 10px
+
+        a
+          font-size: 16px
+          text-decoration: underline
+          line-height: 22px
+          color: #4A90E2
+
+.text
+  p
+    font-size: 15px
+    line-height: 21px
+    color: #4A4A4A
+    margin-bottom: 25px
+
+    //&:nth-child(last)
+      margin-bottom: 0px

@@ -1,0 +1,13 @@
+.service.clearfix
+  .left
+    .img
+      = image_tag @service.image_url(:big) if @service.image?
+    .button Запишитесь на бесплатную диагностику
+  .right
+    .service-name
+      = @service.name
+    .service-about
+      == @service.about.gsub("\n", "<br />")
+
+.subtitle Другие предложения нашего сервиса
+= render partial: 'services/list', locals: {services: @category.services}

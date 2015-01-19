@@ -1,0 +1,17 @@
+.topbar.clearfix
+  .logo
+    | Сервис 001
+  .phone
+    | (495) 792 89 59
+
+
+
+.navbar
+  ul.nav
+
+    - Category.order(:id).each do |category|
+      li
+        = link_to category.name, category_services_path(category)
+
+    li
+      = link_to 'Контакты', root_path

@@ -1,0 +1,7 @@
+ul.services.clearfix
+  - services.each do |service|
+    li
+      a href = category_service_path(@category, service)
+        .img
+          = image_tag service.image_url(:thumb) if service.image?
+        = service.name
