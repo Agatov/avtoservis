@@ -66,6 +66,7 @@ gem 'net-ssh', '~>2.7.0'
 gem 'capistrano', '~> 2.15.5', group: :development
 gem 'wysiwyg-rails'
 gem 'font-awesome-rails'
+gem 'geocoder'
 
 gem 'pony'
 
