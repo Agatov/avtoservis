@@ -4,5 +4,7 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
   def index
+    @settings = Setting.first
+    @photos = Photo.order(:id).limit(3)
   end
 end

@@ -1,4 +1,9 @@
-.subtitle
+.breadcrumbs
+  = link_to 'Главная страница', root_path
+  = ' → '
+  = @category.name
+
+.subtitle(style = 'margin-top: 0px;')
   = @category.name
 
 = render partial: 'services/list', locals: {services: @services}

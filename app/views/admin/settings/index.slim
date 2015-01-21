@@ -4,5 +4,8 @@ legend Настройки
   .col-md-6
 
     = simple_form_for @settings, url: admin_setting_path(@settings) do |f|
+      = f.input :phone
+      = f.input :address
+      = f.input :schedule
       = f.input :about, input_html: {rows: 20}
       = f.submit 'Готово', class: [:btn, 'btn-lg', 'btn-success']

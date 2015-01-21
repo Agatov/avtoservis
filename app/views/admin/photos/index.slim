@@ -1,0 +1,10 @@
+legend Добавить фотографию
+
+= simple_form_for Photo.new, url: admin_photos_path do |f|
+  = f.input :image
+  = f.submit 'Готово', class: [:btn, 'btn-lg', 'btn-success']
+
+legend Список фотографий
+
+.row
+  = render @photos

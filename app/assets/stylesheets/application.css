@@ -13,4 +13,8 @@
  *= require reset
  *= require index
  *= require services
+ *= require photos
+ *= require lightbox
+ *= require bxslider
+ *= require bxslider_settigs.sass
  */

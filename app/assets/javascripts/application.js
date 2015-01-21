@@ -11,6 +11,7 @@
 // about supported directives.
 //
 //= require jquery
-//= require jquery_ujs
-//= require turbolinks
-//= require_tree .
+//= require bxslider
+//= require lightbox.min
+//= require initializer
+//= require map

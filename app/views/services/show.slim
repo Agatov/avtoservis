@@ -1,3 +1,10 @@
+.breadcrumbs
+  = link_to 'Главная страница', root_path
+  = ' → '
+  = link_to @category.name, category_services_path(@category)
+  = ' → '
+  = @service.name
+
 .service.clearfix
   .left
     .img

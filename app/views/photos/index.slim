@@ -1,0 +1,11 @@
+.breadcrumbs
+  = link_to 'Главная страница', root_path
+  = ' → Фотогаллерея'
+.subtitle(style = 'margin-top: 0px;') Фотогаллерея
+
+.photos.clearfix
+  - @photos.each do |photo|
+    - if photo.image?
+      .photo
+        a(href = photo.image_url data-lightbox = 'gallery')
+          = image_tag photo.image_url(:thumb)
