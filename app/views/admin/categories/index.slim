@@ -9,7 +9,7 @@ table.table
       th
         | Название категории
       th
-        | Количество услуг
+        | Раздел
       th
         | Действия
   tbody
@@ -18,7 +18,11 @@ table.table
         td
           = category.name
         td
-          = category.services_count.to_s
+          - if category.base?
+            | Корневая категория
+          - else category.base?
+            = category.section.name if category.section_id?
+
         td
           = link_to 'Редактировать', edit_admin_category_path(category)
           = link_to 'Удалить', admin_category_path(category), method: :destroy, confirm: 'Вы точно хотите удалить эту категорию?'

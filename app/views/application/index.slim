@@ -1,19 +1,30 @@
-.slider
-  ul.bxslider
-    li
-      = image_tag 'banner.jpg'
-    li
-      = image_tag 'banner.jpg'
-    li
-      = image_tag 'banner.jpg'
+
+section (style = 'background: #f7f7f7')
+  .wrapper
+    .slider
+      ul.bxslider
+        li
+          = image_tag 'banner-test.jpg'
+        li
+          = image_tag 'banner-test.jpg'
+        li
+          = image_tag 'banner-test.jpg'
 
 
-.title
-  |
-    О нашем автосервисе
+section (style = 'background: #fff; padding: 40px 0px; padding-top: 5px;')
+  .wrapper
+    .title Услуги автосервиса
+    = render partial: 'services/list', locals: {services: @services}
+
+section (style = 'background: #f7f7f7; padding: 40px 0px;')
+  .wrapper
+    .title На территории нашего автосервиса работают
+    = render partial: 'pages/list', locals: {pages: @pages}
 
 
-.main-page.clearfix
+
+
+//.main-page.clearfix
   .content
 
     .text
@@ -27,7 +38,16 @@
             = image_tag photo.image_url(:thumb) if photo.image?
 
 
-.map-block
+
+section.clearfix (style = 'padding: 40px 0px')
+  .wrapper
+    #about
+      .subtitle О компании
+      = @settings.about.gsub("\n", "<br />").html_safe
+
+    #map
+
+//.map-block
   #map
   .contacts-widget
     .widget-title Контакты

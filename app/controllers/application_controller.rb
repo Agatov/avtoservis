@@ -5,6 +5,12 @@ class ApplicationController < ActionController::Base
 
   def index
     @settings = Setting.first
-    @photos = Photo.order(:id).limit(3)
+    @services = Service.order(:id)
+    @pages = Page.order(:id)
+  end
+
+  def contacts
+    @settings = Setting.first
+    @services = Service.order(:id)
   end
 end

@@ -1,18 +1,41 @@
-.topbar.clearfix
-  .logo
-    = link_to 'Техцентр №1', root_path
-    -#| Сервис 001
-  .phone
-    = Setting.first.phone
+.intro.clearfix
+  .wrapper
+    .topbar.clearfix
+      .logo
+        = link_to 'Техцентр №1', root_path
+        -#| Сервис 001
+      .phone
+        = Setting.first.phone
 
 
-
-.navbar
-  ul.nav
-
-    - Category.order(:id).each do |category|
+nav
+  .wrapper
+    ul
       li
-        = link_to category.name, category_services_path(category)
+        = link_to 'Главная страница', root_path
 
-    li
-      = link_to 'Контакты', root_path
+      li
+        = link_to 'Услуги', services_path
+
+        - services = Service.order(:id)
+
+        ul
+          - services.each do |service|
+            li
+              = link_to service.name, service_path(service)
+
+      li
+        = link_to 'Фотогаллерея', photos_path
+
+      li
+        = link_to 'Кафе и магазин', pages_path
+
+        - pages = Page.order(:id)
+
+        ul
+          - pages.each do |page|
+            li
+              = link_to page.name, page_path(page)
+
+      li
+        a (href = "/contacts") Контакты

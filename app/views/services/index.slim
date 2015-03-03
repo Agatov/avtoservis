@@ -1,9 +1,4 @@
-.breadcrumbs
-  = link_to 'Главная страница', root_path
-  = ' → '
-  = @category.name
-
-.subtitle(style = 'margin-top: 0px;')
-  = @category.name
-
-= render partial: 'services/list', locals: {services: @services}
+section (style = 'padding: 40px 0')
+  .wrapper
+    .title Услуги автосервиса
+    = render partial: 'services/list', locals: {services: @services}

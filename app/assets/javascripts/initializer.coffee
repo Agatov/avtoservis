@@ -1,3 +1,5 @@
 $ ->
 
-  $(".bxslider").bxSlider({auto: true})
+  $(".bxslider").bxSlider
+    auto: true
+    pager: false

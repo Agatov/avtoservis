@@ -1,3 +1,4 @@
 = simple_form_for category, url: url do |f|
+  = f.association :section
   = f.input :name
   = f.submit 'Готово', class: [:btn, 'btn-lg', 'btn-success']

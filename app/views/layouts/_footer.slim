@@ -1,6 +1,24 @@
 #footer
-  .line
-  .footer-content
-    |
-      &copy;
-      Название автосервиса 2014 - 2015
+  .wrapper.clearfix
+    .copyright
+      |
+        &copy;
+        Тецхцентр №1 2014 - 2015
+
+    .footer-navigation
+      ul
+        li
+          = link_to 'Главная страница', root_path
+
+        li
+          = link_to 'Услуги', services_path
+
+
+        li
+          = link_to 'Фотогаллерея', photos_path
+
+        li
+          a (href = "/pages") Кафе и магазин
+
+        li
+          a (href = "/contacts") Контакты

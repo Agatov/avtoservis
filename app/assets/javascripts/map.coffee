@@ -2,8 +2,8 @@ $ ->
 
   waitForMap ->
 
-    #http://geocode-maps.yandex.ru/1.x/?geocode=OLOLOLO
-    map = new ymaps.Map($("#map")[0], {center: [63.562057, 53.684480], zoom: 15})
+    #http://geocode-maps.yandex.ru/1.x/?geocode=раменский район , село Еганово ,ул Новостройки д 17
+    map = new ymaps.Map($("#map")[0], {center: [55.534245, 38.029737], zoom: 14})
 
 
     map.behaviors.disable('scrollZoom')
@@ -15,9 +15,9 @@ $ ->
     map.controls.remove('geolocationControl')
 
     placemark = new ymaps.Placemark(
-      [63.562057, 53.684480],
+      [55.534245, 38.029737],
       {
-        balloonContent: 'Адрес Адрес'
+        balloonContent: 'МО, Раменский район, село Еганово, ул Новостройки, д 17'
       }
     )
 
