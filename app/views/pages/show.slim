@@ -1,0 +1,18 @@
+section (style = 'padding: 40px 0')
+  .wrapper
+    .service.clearfix
+      .left
+
+        .nav-panel
+          h3 Услуги автосервиса
+          ul
+            - @services.each do |service|
+              li (class = (params[:id] == service.id.to_s ? 'active' : nil))
+                = link_to service.name, service_path(service)
+
+
+      .right
+        .service-name
+          = @page.name
+        .service-about
+          == @page.content.gsub("\n", "<br />").html_safe

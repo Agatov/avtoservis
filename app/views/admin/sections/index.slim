@@ -1,0 +1,20 @@
+legend
+  | Список разделов
+  a.btn href = new_admin_section_path style = 'float: right;'  Добавить раздел
+
+
+table.table
+  thead
+    tr
+      th
+        | Название раздела
+      th
+        | Действия
+  tbody
+    - @sections.each do |section|
+      tr
+        td
+          = section.name
+        td
+          = link_to 'Редактировать', edit_admin_section_path(section)
+          = link_to 'Удалить', admin_section_path(section), method: :delete, confirm: 'Вы точно хотите удалить этот раздел?'

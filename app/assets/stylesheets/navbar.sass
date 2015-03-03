@@ -1,0 +1,55 @@
+nav
+  //width: 100%
+  background: #2A3158
+  height: 66px
+
+  .wrapper
+    width: 1020px
+
+  ul
+    background: #2A3158
+    list-style: none
+    position: relative
+    display: inline-table
+
+    &:after
+      content: ""
+      clear: both
+      display: block
+
+    li
+      float: left
+
+      &:hover
+        background: #2b375f
+
+        ul
+          display: block
+
+
+      a
+        display: block
+        padding: 25px 40px
+        text-decoration: none
+        color: #fff
+
+      ul
+        display: none
+        background: #2A3158
+        padding: 0px
+        position: absolute
+        top: 100%
+        z-index: 9999
+
+        li
+          float: none
+          border-top: 1px solid #2b375f
+          position: relative
+
+          a
+            padding: 15px 40px
+            color: #fff
+            transition: all .3s
+
+            &:hover
+              background: #2b375f

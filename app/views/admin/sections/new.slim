@@ -1,0 +1,5 @@
+legend Добавление раздела
+
+.row
+  .col-md-6
+    = render partial: "admin/sections/form", locals: {section: @section, url: admin_sections_path}

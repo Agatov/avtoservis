@@ -1,0 +1,24 @@
+legend
+  | Список страниц сайта
+  a.btn href = new_admin_page_path style = 'float: right;'  Добавить страницу
+
+
+table.table
+  thead
+    tr
+      th
+        | Название
+      th
+        | Категория
+      th
+        | Действия
+  tbody
+    - @pages.each do |page|
+      tr
+        td
+          = page.name
+        td
+          = page.category.name if page.category_id?
+        td
+          = link_to 'Редактировать', edit_admin_page_path(page)
+          = link_to 'Удалить', admin_page_path(page), method: :destroy, confirm: 'Вы точно хотите удалить страницу?'

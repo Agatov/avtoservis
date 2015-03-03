@@ -1,0 +1,7 @@
+ul.services.clearfix
+  - pages.each do |page|
+    li
+      a href = page_path(page)
+        .img
+          = image_tag page.image_url(:thumb) if page.image?
+        .name = page.name
