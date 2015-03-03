@@ -23,22 +23,6 @@ section (style = 'background: #f7f7f7; padding: 40px 0px;')
 
 
 
-
-//.main-page.clearfix
-  .content
-
-    .text
-      p
-        == @settings.about.gsub("\n", "<br />")
-  .gallery-block
-    .gallery-photos
-      - @photos.each do |photo|
-        .photo
-          a(href = photos_path)
-            = image_tag photo.image_url(:thumb) if photo.image?
-
-
-
 section.clearfix (style = 'padding: 40px 0px')
   .wrapper
     #about
